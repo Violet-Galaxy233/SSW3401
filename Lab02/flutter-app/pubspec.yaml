@@ -1,0 +1,22 @@
+name: lab2_flutter_gui
+description: "SSW3401 Lab 2 Flutter GUI through the tutorial image-loading milestone."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.13.7
+
+dependencies:
+  fluentui_system_icons: ^1.1.273
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/logo.png

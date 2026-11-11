@@ -5,7 +5,7 @@
 | 实验 | 内容 | 当前进度 |
 | --- | --- | --- |
 | [Lab 1](Lab01/README.md) | Flutter 环境安装、首个原生 Android App | App 编译及模拟器验证完成，录屏和源码包已准备；Task 1 截图待归档 |
-| [Lab 2](Lab02/README.md) | Flutter GUI 基础 | 已归档实验要求，尚未开始开发 |
+| [Lab 2](Lab02/README.md) | Flutter GUI 基础 | 已完成至 03:03:00，源码、4 张截图、演示录像和源码包已归档 |
 
 ```text
 SSW3401/
@@ -16,7 +16,11 @@ SSW3401/
 │   ├── recordings/      Task 2 的演示录像
 │   └── submission/      可提交的源码 ZIP
 └── Lab02/
-    └── instructions/    实验要求
+    ├── instructions/    实验要求
+    ├── flutter-app/     Flutter 项目源代码和本地图片
+    ├── screenshots/     4 个页面的运行截图
+    ├── recordings/      运行演示录像
+    └── submission/      可提交的源码 ZIP
 ```
 
 今后的实验继续使用 Lab03、Lab04 等独立子文件夹。截图和最终录像随实验上传；构建缓存、电脑专用配置和原始录像仅保留在本地。
