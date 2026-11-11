@@ -1,47 +1,53 @@
 # Lab 1
 
-本实验包含 Flutter 环境准备和第一个原生 Android App。
+This lab covers Flutter environment setup and a first native Android app.
 
-## 实验要求
+## Assignment
 
-原文见 [实验文档](instructions/SSW3401%20Lab%201%20-%20Student.docx)。
+See the [original assignment](instructions/SSW3401%20Lab%201%20-%20Student.docx).
 
-## Task 1 Flutter 开发环境
+## Task 1: Flutter development environment
 
-- 已检查 Flutter 和 Android 开发工具，Android 环境检查通过。
-- 截图须包含 flutter doctor 结果、桌面和当前时间，以图片提交，不压缩。
-- `screenshots/` 用于保存该截图；目前截图文件尚未归档。
-- [安装教程](https://www.youtube.com/watch?v=CD1Y2DmL5JM)，实验要求看到 56:19。
+- Flutter and the Android development tools have been checked; the Android toolchain checks passed.
+- Submit a screenshot showing the flutter doctor output, the desktop, and the current time. Submit the image directly without ZIP compression.
+- The screenshot belongs in `screenshots/`; it has not yet been located and archived.
+- Follow the [assigned setup tutorial](https://www.youtube.com/watch?v=CD1Y2DmL5JM) through 56:19.
 
-## Task 2 原生 Android App
+## Task 2: Native Android app
 
-- [项目源代码](android-app/)
-- [最终演示录像](recordings/task2-demo.mp4)
-- [提交用源码 ZIP](submission/SSW3401-Lab1-Task2-Source.zip)
-- [老师指定教程](https://www.youtube.com/watch?v=SJw3Nu_h8kk)
+- [Project source code](android-app/)
+- [Final demonstration recording](recordings/task2-demo.mp4)
+- [Source ZIP for submission](submission/SSW3401-Lab1-Task2-Source.zip)
+- [Assigned tutorial](https://www.youtube.com/watch?v=SJw3Nu_h8kk)
 
-项目使用 Kotlin 和 Jetpack Compose，显示 Hello Android，并输出 Activity 生命周期日志。
+The app uses Kotlin and Jetpack Compose, displays Hello Android, and prints Activity lifecycle events.
 
-使用 Android Studio 打开本实验的 `android-app` 文件夹，等待项目同步，选择 Pixel 8 模拟器，然后点击运行按钮。
+Open this lab's `android-app` folder in Android Studio. Wait for project synchronization, select the Pixel 8 emulator, and run the app.
 
-在 Logcat 中输入以下筛选条件：
+Use the following Logcat filter:
 
 ```text
 package:com.example.lab1nativeapp tag:System.out
 ```
 
-| 操作 | 观察到的日志 |
+| Action | Observed lifecycle events |
 | --- | --- |
-| 首次启动 | onCreate → onStart → onResume |
-| 按 Home 切到后台 | onPause → onStop |
-| 从最近任务返回 | onRestart → onStart → onResume |
-| 旋转屏幕 | onPause → onStop → onDestroy，然后 onCreate → onStart → onResume |
+| Launch the app | onCreate → onStart → onResume |
+| Press Home to move it to the background | onPause → onStop |
+| Return through recent apps | onRestart → onStart → onResume |
+| Rotate the screen | onPause → onStop → onDestroy, then onCreate → onStart → onResume |
 
-已通过实际编译，并在 Pixel 8 模拟器上验证上述操作。最终 MP4 演示包含 App 显示、切到后台和返回前台。
+The project was built successfully and these actions were verified on a Pixel 8 emulator. The final MP4 demonstrates the app, moving it to the background, and returning to the foreground.
 
-## 提交文件
+## Submission files
 
-1. Task 1：`screenshots/` 中的 flutter doctor 图片，归档后单独提交。
-2. Task 2：`submission/SSW3401-Lab1-Task2-Source.zip` 和 `recordings/task2-demo.mp4`。
+1. Task 1: the flutter doctor screenshot in `screenshots/`, submitted separately once archived.
+2. Task 2: `submission/SSW3401-Lab1-Task2-Source.zip` and `recordings/task2-demo.mp4`.
 
-源码 ZIP 包含完整 Android Studio 项目；解压后打开其中的项目文件夹。
+The source ZIP contains the Android Studio project. Extract it and open the enclosed project folder.
+
+## PutraBLAST status
+
+Checked on 11 November 2026. PutraBLAST reports **No submissions have been made yet** and shows the assignment as overdue by 11 days and 14 hours. The deadline was 30 October 2026 at 11:00 PM. The page offers no Add submission or Edit submission button, so the work could not be submitted. The instructor needs to reopen the submission or provide another submission route.
+
+A screenshot of the status is archived locally at `recordings/raw/submission-status.png` and is excluded from GitHub.

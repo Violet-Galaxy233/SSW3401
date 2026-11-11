@@ -16,7 +16,7 @@ import com.example.lab1nativeapp.ui.theme.Lab1NativeAppTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Logcat 中筛选 System.out，即可观察 Activity 的生命周期。
+        // Filter Logcat by System.out to observe the Activity lifecycle.
         println("onCreate")
         enableEdgeToEdge()
         setContent {

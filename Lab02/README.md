@@ -1,58 +1,69 @@
-# Lab 2 Understanding the Basics of Flutter GUI
+# Lab 2: Understanding the Basics of Flutter GUI
 
-已完成老师指定教程截至 **03:03:00** 的功能：四个底部导航标签、页面切换、首页文字排版和本地图片显示。
+Implements the assigned tutorial through **03:03:00**: four bottom navigation tabs, screen switching, home-header text layout, and a local image.
 
-## 文件位置
+## Files
 
-| 内容 | 位置 |
+| Item | Location |
 | --- | --- |
-| 原始实验要求 | [实验文档](instructions/SSW3401%20Lab%202.docx) |
-| Flutter 项目源代码 | [flutter-app](flutter-app/) |
-| 首页截图 | [01-home.png](screenshots/01-home.png) |
-| Search 截图 | [02-search.png](screenshots/02-search.png) |
-| Tickets 截图 | [03-tickets.png](screenshots/03-tickets.png) |
-| Profile 截图 | [04-profile.png](screenshots/04-profile.png) |
-| 实际运行录屏 | [lab2-demo.mp4](recordings/lab2-demo.mp4) |
-| 提交用源码包 | [SSW3401-Lab2-Source.zip](submission/SSW3401-Lab2-Source.zip) |
+| Original assignment | [Assignment document](instructions/SSW3401%20Lab%202.docx) |
+| Flutter project source | [flutter-app](flutter-app/) |
+| Home screenshot | [01-home.png](screenshots/01-home.png) |
+| Search screenshot | [02-search.png](screenshots/02-search.png) |
+| Tickets screenshot | [03-tickets.png](screenshots/03-tickets.png) |
+| Profile screenshot | [04-profile.png](screenshots/04-profile.png) |
+| Demonstration recording | [lab2-demo.mp4](recordings/lab2-demo.mp4) |
+| Source archive | [SSW3401-Lab2-Source.zip](submission/SSW3401-Lab2-Source.zip) |
+| GitHub links for submission | [GitHub-Link.txt](submission/GitHub-Link.txt) |
 
-## 与教程对应的功能
+## Tutorial coverage
 
-| 教程阶段 | 本项目实现 |
+| Tutorial topic | Implementation |
 | --- | --- |
-| main、MaterialApp、Scaffold | 应用入口、主题和页面容器 |
-| BottomNavigationBar | Home、Search、Tickets、Profile 四个标签 |
-| StatefulWidget 和 setState | 点击标签时更新页面及选中图标 |
-| 首页布局和文字样式 | Good morning、Book Tickets、Row、Column、Container 和共用样式类 |
-| 02:51:06 图片容器 | 50×50 容器和圆角 |
-| 02:56:55 至 03:03:00 图片显示 | 在 pubspec.yaml 注册 PNG，并用 AssetImage 和 DecorationImage 显示 |
+| main, MaterialApp, Scaffold | Application entry point, theme, and screen container |
+| BottomNavigationBar | Home, Search, Tickets, and Profile tabs |
+| StatefulWidget and setState | Updates the screen and selected icon when a tab is tapped |
+| Home layout and text styles | Good morning, Book Tickets, Row, Column, Container, and shared styles |
+| Image container at 02:51:06 | A 50 × 50 container with rounded corners |
+| Image display from 02:56:55 through 03:03:00 | PNG registered in pubspec.yaml and displayed with AssetImage and DecorationImage |
 
-首页下方的 Search icon / Empty space，以及 Search、Tickets、Profile 页面中的文字，是视频在这个时间点保留的占位内容。后续课程才继续实现搜索栏、机票和酒店列表。
+The Search icon / Empty space row and the text on Search, Tickets, and Profile retain the tutorial placeholders at this point. The search bar, ticket lists, and hotel lists appear later in the course.
 
-教程原素材下载在 2026 年 11 月 11 日返回 HTTP 403，因此项目使用自制的飞机 PNG 代替原 logo，图片加载方式和圆角布局与教程一致。生成方式和来源说明见 [assets/README.md](flutter-app/assets/README.md)。
+The original asset download returned HTTP 403 on 11 November 2026. This project uses an original airplane PNG in place of the tutorial logo, with the same image-loading approach and rounded layout. See [asset details](flutter-app/assets/README.md) for the source and generator.
 
-## 运行和验证
+## Run and verification
 
-打开本实验下的 `flutter-app` 文件夹，启动 Android 模拟器，然后运行 `flutter pub get` 和 `flutter run`。
+Open this lab's `flutter-app` folder, start an Android emulator, then run:
 
-- 已通过 flutter analyze，无代码问题。
-- 已通过全部 3 项 Flutter 检查：真实图片解码、四个页面切换与返回、小屏幕大字体布局。
-- 已编译并安装到 Pixel 8 模拟器，逐页操作确认正常。
-- 演示录像展示首页、Search、Tickets、Profile，并返回首页。
+```sh
+flutter pub get
+flutter run
+```
 
-## 提交到 PutraBLAST
+- `flutter analyze` passed with no issues.
+- All three Flutter tests passed: actual image decoding, navigation through all four screens and back, and a narrow-screen layout with enlarged text.
+- The app was built, installed, and manually verified on a Pixel 8 emulator.
+- The recording shows Home, Search, Tickets, Profile, and a return to Home.
 
-在文本框填写课程仓库链接：
+## PutraBLAST submission
 
-https://github.com/Violet-Galaxy233/SSW3401
+Submitted for grading on **11 November 2026 at 1:47 PM**, before the 11:00 PM deadline.
 
-Lab 2 的直接访问链接：
+The submission page provides file uploads without an online-text field. The following files were uploaded:
 
-https://github.com/Violet-Galaxy233/SSW3401/tree/main/Lab02
+1. `submission/GitHub-Link.txt`, containing the repository and Lab 2 source links.
+2. `recordings/lab2-demo.mp4`, the 35-second demonstration recording.
 
-上传 `recordings/lab2-demo.mp4`。如需要单独提供源码文件，可使用 `submission/SSW3401-Lab2-Source.zip`；GitHub 中也已按文件保存完整源码。
+Repository: https://github.com/Violet-Galaxy233/SSW3401
 
-## 参考
+Lab 2: https://github.com/Violet-Galaxy233/SSW3401/tree/main/Lab02
 
-- [老师指定视频](https://www.youtube.com/watch?v=DsTMhjaRQws)
-- [教程原素材页面](https://www.dbestech.com/tutorials/flutter-ticket-booking-app)
-- [Flutter 官方图片文档](https://docs.flutter.dev/ui/assets/assets-and-images)
+The optional source archive is available at `submission/SSW3401-Lab2-Source.zip`. The repository also contains the complete source as individual files.
+
+The submission confirmation screenshot is archived locally at `recordings/raw/submission-confirmation.png` and is excluded from GitHub.
+
+## References
+
+- [Assigned video](https://www.youtube.com/watch?v=DsTMhjaRQws)
+- [Original course assets page](https://www.dbestech.com/tutorials/flutter-ticket-booking-app)
+- [Flutter image documentation](https://docs.flutter.dev/ui/assets/assets-and-images)
