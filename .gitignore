@@ -1,0 +1,15 @@
+# Local tools and generated files
+.DS_Store
+**/.DS_Store
+**/.gradle/
+**/.kotlin/
+**/.idea/
+**/build/
+**/local.properties
+**/*.iml
+**/.externalNativeBuild/
+**/.cxx/
+**/captures/
+
+# Keep original recordings locally; publish the final demonstration.
+**/recordings/raw/
