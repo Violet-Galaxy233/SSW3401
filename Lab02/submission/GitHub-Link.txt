@@ -1,0 +1,12 @@
+SSW3401 Lab 2 - Flutter GUI
+
+GitHub repository:
+https://github.com/Violet-Galaxy233/SSW3401
+
+Lab 2 folder:
+https://github.com/Violet-Galaxy233/SSW3401/tree/main/Lab02
+
+Flutter source code:
+https://github.com/Violet-Galaxy233/SSW3401/tree/main/Lab02/flutter-app
+
+Screencast: lab2-demo.mp4
