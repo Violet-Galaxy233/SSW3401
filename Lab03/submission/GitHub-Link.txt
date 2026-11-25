@@ -1,0 +1,7 @@
+SSW3401 Lab 3 — Advanced Flutter GUI
+
+Public repository
+https://github.com/Violet-Galaxy233/SSW3401
+
+Lab 3 source and demonstration
+https://github.com/Violet-Galaxy233/SSW3401/tree/main/Lab03
