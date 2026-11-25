@@ -35,11 +35,16 @@ Verified on 25 November 2026 with Flutter 3.47.9 and Dart 3.13.7:
 
 The demonstration was recorded before the enlarged-text layout correction. The correction preserves the standard-size layout and is covered by the passing regression test.
 
-## Submit on PutraBLAST
+## PutraBLAST submission
 
-Paste the public repository URL listed in [GitHub-Link.txt](submission/GitHub-Link.txt) and upload [lab3-demo.mp4](recordings/lab3-demo.mp4).
+Submitted on **25 November 2026 at 4:32 PM Malaysia time**. PutraBLAST confirms **Submitted for grading**, seven days and six hours before the deadline of 2 December 2026 at 11:00 PM.
 
-Due Wednesday, 2 December 2026 at 11:00 PM Malaysia time.
+The submission page provides file uploads without an online-text field. The submitted files are:
+
+- [GitHub-Link.txt](submission/GitHub-Link.txt), containing the public repository and Lab 3 links.
+- [lab3-demo.mp4](recordings/lab3-demo.mp4), the demonstration recording.
+
+A screenshot of the confirmation is archived locally at `recordings/raw/submission-confirmation.jpg` and is excluded from GitHub.
 
 - [Assigned video from 03:03:00](https://www.youtube.com/watch?v=DsTMhjaRQws&t=10980s)
 - [Tutorial notes and sample data](https://www.dbestech.com/tutorials/flutter-ticket-booking-app)

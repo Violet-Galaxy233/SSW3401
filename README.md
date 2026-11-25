@@ -6,7 +6,7 @@ Coursework is organized by lab. Each lab folder links to its project code, demon
 | --- | --- | --- |
 | [Lab 1](Lab01/README.md) | Flutter setup and the first native Android app | App built and verified; recording and source archive ready. Task 1 screenshot still needs to be archived. PutraBLAST shows no submission and offers no submission button as of 11 November 2026. |
 | [Lab 2](Lab02/README.md) | Flutter GUI basics | Completed through 03:03:00. Source code, four screenshots, recording, and source archive included. Submitted for grading on PutraBLAST on 11 November 2026. |
-| [Lab 3](Lab03/README.md) | Advanced Flutter GUI | Flight and hotel lists, search, ticket information and details. Source, screenshots and demonstration included. |
+| [Lab 3](Lab03/README.md) | Advanced Flutter GUI | Source, screenshots and demonstration included. All five tests and the Android APK build passed. Submitted for grading on PutraBLAST on 25 November 2026. |
 
 ```text
 SSW3401/
