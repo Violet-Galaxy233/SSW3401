@@ -33,38 +33,48 @@ class TicketView extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(16, 15, 16, 11),
               child: Column(
                 children: [
-                  Row(
-                    children: [
-                      _AirportCode(from['code']!, foreground),
-                      Expanded(
-                        child: Row(
+                  LayoutBuilder(
+                    builder: (context, constraints) {
+                      final path = _FlightPath(
+                        foreground: foreground,
+                        background: routeColor,
+                      );
+                      if (constraints.maxWidth <
+                          MediaQuery.textScalerOf(context).scale(160)) {
+                        return Column(
                           children: [
-                            _RouteDot(foreground),
-                            Expanded(
-                              child: Stack(
-                                alignment: Alignment.center,
-                                children: [
-                                  DashedLine(color: foreground),
-                                  ColoredBox(
-                                    color: routeColor,
-                                    child: Transform.rotate(
-                                      angle: math.pi / 2,
-                                      child: Icon(
-                                        Icons.flight,
-                                        color: foreground,
-                                        size: 22,
-                                      ),
-                                    ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Expanded(
+                                  child: _AirportCode(
+                                    from['code']!,
+                                    foreground,
                                   ),
-                                ],
-                              ),
+                                ),
+                                const SizedBox(width: 12),
+                                Expanded(
+                                  child: _AirportCode(
+                                    to['code']!,
+                                    foreground,
+                                    alignment: TextAlign.end,
+                                  ),
+                                ),
+                              ],
                             ),
-                            _RouteDot(foreground),
+                            const SizedBox(height: 8),
+                            path,
                           ],
-                        ),
-                      ),
-                      _AirportCode(to['code']!, foreground),
-                    ],
+                        );
+                      }
+                      return Row(
+                        children: [
+                          _AirportCode(from['code']!, foreground),
+                          Expanded(child: path),
+                          _AirportCode(to['code']!, foreground),
+                        ],
+                      );
+                    },
                   ),
                   const SizedBox(height: 9),
                   Row(
@@ -214,18 +224,50 @@ class DashedLine extends StatelessWidget {
 }
 
 class _AirportCode extends StatelessWidget {
-  const _AirportCode(this.code, this.color);
+  const _AirportCode(this.code, this.color, {this.alignment = TextAlign.start});
 
   final String code;
   final Color color;
+  final TextAlign alignment;
 
   @override
   Widget build(BuildContext context) => Padding(
     padding: const EdgeInsets.symmetric(horizontal: 6),
     child: Text(
       code,
+      textAlign: alignment,
       style: TextStyle(color: color, fontSize: 19, fontWeight: FontWeight.w700),
     ),
+  );
+}
+
+class _FlightPath extends StatelessWidget {
+  const _FlightPath({required this.foreground, required this.background});
+
+  final Color foreground;
+  final Color background;
+
+  @override
+  Widget build(BuildContext context) => Row(
+    children: [
+      _RouteDot(foreground),
+      Expanded(
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            DashedLine(color: foreground),
+            ColoredBox(
+              color: background,
+              child: Transform.rotate(
+                angle: math.pi / 2,
+                child: Icon(Icons.flight, color: foreground, size: 22),
+              ),
+            ),
+          ],
+        ),
+      ),
+      _RouteDot(foreground),
+    ],
   );
 }
 

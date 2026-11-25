@@ -14,10 +14,10 @@ class SectionHeading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(child: Text(title, style: AppStyles.headLineStyle2)),
-        TextButton(
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final heading = Text(title, style: AppStyles.headLineStyle2);
+        final action = TextButton(
           onPressed: onViewAll,
           child: Text(
             'View all',
@@ -25,8 +25,26 @@ class SectionHeading extends StatelessWidget {
               color: AppStyles.primaryColor,
             ),
           ),
-        ),
-      ],
+        );
+
+        if (constraints.maxWidth <
+            MediaQuery.textScalerOf(context).scale(240)) {
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              heading,
+              Align(alignment: Alignment.centerRight, child: action),
+            ],
+          );
+        }
+
+        return Row(
+          children: [
+            Expanded(child: heading),
+            action,
+          ],
+        );
+      },
     );
   }
 }

@@ -2,6 +2,8 @@
 
 This lab continues the Lab 2 ticket-booking project from 03:03:00 through the final hotel detail and back-navigation chapter.
 
+See the [original assignment](instructions/SSW3401%20Lab%203.docx).
+
 | Tutorial section | What the app shows |
 | --- | --- |
 | 03:03–03:59 | Shared image paths, home search box and reusable section headings |
@@ -23,11 +25,15 @@ The project uses Flutter 3.47.9 and Dart 3.13.7. Flights and hotels use the tuto
 
 ## Verification and demonstration
 
-- `flutter analyze` passed. `flutter build bundle --no-pub` compiled the app and assets.
-- A Flutter engine run checked navigation and filtering, including the second flight's details, the Tickets tabs, the hotel grid, a hotel detail screen and Back. The flight detail screen was also checked at 320 logical pixels and 200% text size.
-- The [demonstration](recordings/lab3-demo.mp4) records the running Flutter interface with automated taps and mobile dimensions. The [screenshots](screenshots/) show the same run.
+Verified on 25 November 2026 with Flutter 3.47.9 and Dart 3.13.7:
 
-The Android emulator, APK build and standard widget-test command require local sockets that were unavailable in the verification environment.
+- `flutter analyze --no-pub` passed with no issues.
+- `flutter test --no-pub --reporter expanded` passed all five tests: bundled image decoding, bottom navigation, selecting the correct flight and returning, flight and hotel search, and the home screen at 320 logical pixels with 200% text size.
+- `flutter build apk --debug --no-pub` successfully built the Android APK.
+- Section headings move the View all action below the title when enlarged text needs more space. Ticket airport codes and the flight path use separate rows on narrow screens with enlarged text.
+- The [demonstration](recordings/lab3-demo.mp4) shows the running Flutter interface with automated taps and mobile dimensions. The [screenshots](screenshots/) show the same demonstration run, including flight details, search results, ticket tabs, the hotel grid, hotel details, and Back.
+
+The demonstration was recorded before the enlarged-text layout correction. The correction preserves the standard-size layout and is covered by the passing regression test.
 
 ## Submit on PutraBLAST
 
